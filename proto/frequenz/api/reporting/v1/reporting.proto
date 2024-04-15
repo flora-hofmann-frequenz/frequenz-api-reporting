@@ -170,7 +170,7 @@ message AggregationConfig {
 // voltage across multiple sources within a microgrid or to calculate the average state of
 // charge of several batteries.
 //
-message SimpleAggregatedMetricSample {
+message SimpleAggregatedMetricValue {
   // The UTC sample timestamp for the aggregated metrics.
   //
   // !!! info
@@ -179,7 +179,7 @@ message SimpleAggregatedMetricSample {
 
   // The aggregated value of the metric.
   // float value = 2;
-  frequenz.api.common.v1.metrics.SimpleMetricSample sample = 2;
+  frequenz.api.common.v1.metrics.SimpleMetricValue sample = 2;
 }
 
 // Message defining the request format for fetching historical metrics, such as electrical
@@ -468,7 +468,7 @@ message ListAggregatedMicrogridComponentsDataResponse {
     AggregationConfig aggregation_config = 1;
 
     // A list of aggregated metrics.
-    repeated SimpleAggregatedMetricSample samples = 2;
+    repeated SimpleAggregatedMetricValue samples = 2;
   }
 
   // List of aggregated results, each corresponding to a metric and custom aggregation
@@ -538,5 +538,5 @@ message ReceiveAggregatedMicrogridComponentsDataStreamResponse {
   AggregationConfig aggregation_config = 1;
 
   // Aggregated sample value and corresponding UTC timestamp when it was sampled.
-  SimpleAggregatedMetricSample sample = 2;
+  SimpleAggregatedMetricValue sample = 2;
 }
