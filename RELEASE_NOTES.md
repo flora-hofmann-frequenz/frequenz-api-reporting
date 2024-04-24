@@ -11,10 +11,3 @@ Updated frequenz-api-common dependency from v0.5.1 to v0.6.0
     * Renamed `SimpleAggregatedMetricSample` to `SimpleAggregatedMetricValue`.
     * Renamed `SimpleMetricSample` to `SimpleMetricValue`.
 
-## New Features
-
-<!-- Here goes the main new features and examples or instructions on how to use them -->
-
-## Bug Fixes
-
-<!-- Here goes notable bug fixes that are worth a special mention or explanation -->
