@@ -2,12 +2,16 @@
 
 ## Summary
 
-Updated frequenz-api-common dependency from v0.5.1 to v0.6.0
+<!-- Here goes a general summary of what this release is about -->
 
 ## Upgrading
 
-* The dependency on frequenz-api-common was upgraded to v0.6.0. The release notes of this version can be found here: https://github.com/frequenz-floss/frequenz-api-common/releases/tag/v0.6.0
-* Name changes in reporting.proto:
-    * Renamed `SimpleAggregatedMetricSample` to `SimpleAggregatedMetricValue`.
-    * Renamed `SimpleMetricSample` to `SimpleMetricValue`.
+<!-- Here goes notes on how to upgrade from previous versions, including deprecations and what they should be replaced with -->
 
+## New Features
+
+<!-- Here goes the main new features and examples or instructions on how to use them -->
+
+## Bug Fixes
+
+<!-- Here goes notable bug fixes that are worth a special mention or explanation -->
