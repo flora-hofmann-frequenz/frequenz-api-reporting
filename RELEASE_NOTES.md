@@ -2,7 +2,7 @@
 
 ## Summary
 
-<!-- Here goes a general summary of what this release is about -->
+- Add time filter options to the streaming request, to allow for streaming of historical data.
 
 ## Upgrading
 
@@ -10,7 +10,7 @@
 
 ## New Features
 
-<!-- Here goes the main new features and examples or instructions on how to use them -->
+- The streaming requests now contain optional `TimeFilter` objects for streaming historical data.
 
 ## Bug Fixes
 
