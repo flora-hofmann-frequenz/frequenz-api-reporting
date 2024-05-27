@@ -308,6 +308,10 @@ message ReceiveMicrogridComponentsDataStreamRequest {
 
     // Include options specifying additional fields to be included in the response.
     IncludeOptions include_options = 2;
+
+    // Optional time-based filter criteria.
+    // If omitted, data will start streaming from the timestamp that the request was received.
+    TimeFilter time_filter = 3;
   }
 
   // Encapsulates the microgrid ID and the component IDs within that microgrid for which
@@ -499,6 +503,10 @@ message ReceiveAggregatedMicrogridComponentsDataStreamRequest {
     // Optional resampling options like resolution for the data, represented in seconds.
     // If omitted, data will be returned in its original representation.
     ResamplingOptions resampling_options = 1;
+
+    // Optional time-based filter criteria.
+    // If omitted, data will start streaming from the timestamp that the request was received.
+    TimeFilter time_filter = 2;
   }
 
   // List of pairs of metric and corresponding aggregation formula.
