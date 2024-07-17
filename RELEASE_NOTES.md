@@ -2,7 +2,7 @@
 
 ## Summary
 
-<!-- Here goes a general summary of what this release is about -->
+- Metric source options
 
 ## Upgrading
 
@@ -10,7 +10,9 @@
 
 ## New Features
 
-<!-- Here goes the main new features and examples or instructions on how to use them -->
+- A new field, `MetricSourceOptions` has been added to the `StreamFilter` message, allowing users to give specific sources for a given metric.
+  Multiples of the same metric can exist, in which case they are "tagged" with the source they come from. The metric source options allows
+  the user to specify one or multiple tags.
 
 ## Bug Fixes
 
