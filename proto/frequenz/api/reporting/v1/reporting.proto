@@ -182,6 +182,18 @@ message SimpleAggregatedMetricValue {
   frequenz.api.common.v1.metrics.SimpleMetricValue sample = 2;
 }
 
+// Filter for sources for metrics, specified for a single metric at a time.
+// Specifying a metric here will only stream data for that metric where data
+// can be found tagged with the given source names.
+message MetricSourceOptions {
+  // The metric for which sources will be filtered.
+  frequenz.api.common.v1.metrics.Metric metric = 1;
+
+  // A list of sources to allow for the specified metric.
+  // If this list is empty, then no data for this metric is streamed.
+  repeated string metric_sources = 2;
+}
+
 // Message defining the request format for fetching historical metrics, such as electrical
 // measurements, and other information for individual microgrid components.
 //
@@ -312,6 +324,14 @@ message ReceiveMicrogridComponentsDataStreamRequest {
     // Optional time-based filter criteria.
     // If omitted, data will start streaming from the timestamp that the request was received.
     TimeFilter time_filter = 3;
+
+    // List of metric source filters
+    // For the metrics present in this list, the data from only the specified
+    // sources will be returned. If no sources are provided for a metric in this
+    // list, then no data will be returned for the said metric.
+    // For the metrics not present in this list, data from all of their sources will
+    // be returned.
+    repeated MetricSourceOptions metric_sources = 4;
   }
 
   // Encapsulates the microgrid ID and the component IDs within that microgrid for which

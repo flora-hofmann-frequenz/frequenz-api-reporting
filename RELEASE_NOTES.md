@@ -2,7 +2,7 @@
 
 ## Summary
 
-- Add time filter options to the streaming request, to allow for streaming of historical data.
+- Metric source options
 
 ## Upgrading
 
@@ -10,7 +10,9 @@
 
 ## New Features
 
-- The streaming requests now contain optional `TimeFilter` objects for streaming historical data.
+- A new field, `MetricSourceOptions` has been added to the `StreamFilter` message, allowing users to give specific sources for a given metric.
+  Multiples of the same metric can exist, in which case they are "tagged" with the source they come from. The metric source options allows
+  the user to specify one or multiple tags.
 
 ## Bug Fixes
 
